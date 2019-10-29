@@ -49,9 +49,7 @@ public class TheLongestSequence {
         }
         if (sum2 == sum) {
             System.out.println(sum2);
-        } else if (sum2 > sum) {
-            System.out.println(sum2);
-        } else System.out.println(sum);
+        } else System.out.println(Math.max(sum2, sum));
     }
 }
 
