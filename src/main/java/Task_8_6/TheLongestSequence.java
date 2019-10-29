@@ -37,6 +37,18 @@ public class TheLongestSequence {
             nums.add(s);
         }
 
+        System.out.print(nums.get(0) + ", ");
+        System.out.print(nums.get(1) + ", ");
+        System.out.print(nums.get(2) + ", ");
+        System.out.print(nums.get(3) + ", ");
+        System.out.print(nums.get(4) + ", ");
+        System.out.print(nums.get(5) + ", ");
+        System.out.print(nums.get(6) + ", ");
+        System.out.print(nums.get(7) + ", ");
+        System.out.print(nums.get(7) + ", ");
+        System.out.println(nums.get(9));
+
+
         int sum = 1;
         int sum2 = 1;
         for (int i = 1; i < 10; i++) {
