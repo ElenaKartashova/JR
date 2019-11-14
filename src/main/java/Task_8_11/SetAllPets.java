@@ -70,14 +70,12 @@ public class SetAllPets {
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
-        pets.removeAll(cats);
-      /*  Iterator<Object> iterator = pets.iterator();
+        Iterator<Object> iterator = pets.iterator();
         while (iterator.hasNext()) {
             if (iterator.next() instanceof Cat) {
                 iterator.remove();
             }
-        }*/
-      return;
+        }
     }
 
     public static void printPets(Set<Object> pets) {
