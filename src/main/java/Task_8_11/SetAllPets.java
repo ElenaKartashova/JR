@@ -32,7 +32,7 @@ public class SetAllPets {
 
         Set<Object> pets = join(cats, dogs);
         printPets(pets);
-
+        System.out.println("\n");
         removeCats(pets, cats);
         printPets(pets);
     }
@@ -60,22 +60,14 @@ public class SetAllPets {
     public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs) {
         //напишите тут ваш код
         Set<Object> petsUnion = new HashSet<Object>();
-        // Iterator<Object> iterator = petsUnion.iterator();
-        while (petsUnion.size() < 7) {
-            petsUnion.addAll(cats);
-            petsUnion.addAll(dogs);
-        }
+        petsUnion.addAll(cats);
+        petsUnion.addAll(dogs);
         return petsUnion;
     }
 
     public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
-        Iterator<Object> iterator = pets.iterator();
-        while (iterator.hasNext()) {
-            if (iterator.next() instanceof Cat) {
-                iterator.remove();
-            }
-        }
+        pets.removeAll(cats);
     }
 
     public static void printPets(Set<Object> pets) {
