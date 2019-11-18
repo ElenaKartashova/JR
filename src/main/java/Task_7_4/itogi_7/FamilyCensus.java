@@ -35,7 +35,7 @@ public class FamilyCensus {
         Human natasha = new Human("Наталья", false, 49, GrandfatherGeorge, GrandmotherNatasha);
         Human sasha = new Human("Саша", true, 27, GrandfatherMichael, GrandmotherAlexandra);
         Human pasha = new Human("Паша", true, 28, GrandfatherMichael, GrandmotherAlexandra);
-        Human kolya = new Human("Коля", true, 34, GrandfatherMichael, GrandfatherMichael);
+        Human tanya = new Human("Таня", true, 40, GrandfatherMichael, GrandfatherMichael);
 
         System.out.println(GrandmotherNatasha);
         System.out.println(GrandmotherAlexandra);
@@ -46,7 +46,7 @@ public class FamilyCensus {
         System.out.println(natasha);
         System.out.println(sasha);
         System.out.println(pasha);
-        System.out.println(kolya);
+        System.out.println(tanya);
     }
 
     public static class Human {
