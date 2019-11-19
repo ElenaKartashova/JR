@@ -23,29 +23,33 @@ public class BigFamily {
         //напишите тут ваш код
 
         ArrayList<Human> family = new ArrayList<Human>();
-        ArrayList<Human> grand = new ArrayList<Human>();
+        ArrayList<Human> grand1 = new ArrayList<Human>();
+        ArrayList<Human> grand2 = new ArrayList<Human>();
         ArrayList<Human> kids = new ArrayList<Human>();
-        ArrayList<Human> parents = new ArrayList<Human>();
-
+        ArrayList<Human> parents1 = new ArrayList<Human>();
+        ArrayList<Human> parents2 = new ArrayList<Human>();
 
         kids.add(new Human("kid1", true, 3, null));
         kids.add(new Human("kid2", true, 4, null));
         kids.add(new Human("kid3", true, 5, null));
 
-        parents.add(new Human("Father", true, 25, kids));
+        parents1.add(new Human("Father", true, 25, kids));
+        parents2.add(new Human("Mother", false, 25, kids));
 
+        grand1.add(new Human("дедушка1", true, 50, parents1));
+        grand2.add(new Human("дедушка2", true, 50, parents2));
+        grand1.add(new Human("бабушка1", false, 50, parents1));
+        grand2.add(new Human("бабушка2", false, 50, parents2));
 
-        grand.add(new Human("дедушка1", true, 50, parents));
-        grand.add(new Human("дедушка2", true, 50, parents));
-        grand.add(new Human("бабушка1", false, 50, parents));
-        grand.add(new Human("бабушка2", false, 50, parents));
-
-        family.addAll(grand);
-        family.addAll(parents);
+        family.addAll(grand1);
+        family.addAll(grand2);
+        family.addAll(parents1);
+        family.addAll(parents2);
         family.addAll(kids);
 
-        for (Human item : family)
+        for (Human item : family) {
             System.out.println(item);
+        }
     }
 
     public static class Human {
