@@ -23,29 +23,27 @@ public class BigFamily {
         //напишите тут ваш код
 
         ArrayList<Human> family = new ArrayList<Human>();
-        ArrayList<Human> grand1 = new ArrayList<Human>();
-        ArrayList<Human> grand2 = new ArrayList<Human>();
-        ArrayList<Human> kids = new ArrayList<Human>();
-        ArrayList<Human> parents1 = new ArrayList<Human>();
-        ArrayList<Human> parents2 = new ArrayList<Human>();
+        ArrayList<Human> grand = new ArrayList<Human>();
+        ArrayList<Human> parentsF = new ArrayList<Human>();
+        ArrayList<Human> parentsM = new ArrayList<Human>();
+        ArrayList<Human> child = new ArrayList<Human>();
 
-        kids.add(new Human("kid1", true, 3, null));
-        kids.add(new Human("kid2", true, 4, null));
-        kids.add(new Human("kid3", true, 5, null));
+        child.add(new Human("kid1", true, 3, new ArrayList<Human>()));
+        child.add(new Human("kid2", true, 4, new ArrayList<Human>()));
+        child.add(new Human("kid3", false, 5, new ArrayList<Human>()));
 
-        parents1.add(new Human("Father", true, 25, kids));
-        parents2.add(new Human("Mother", false, 25, kids));
+        parentsF.add(new Human("Father", true, 25, child));
+        parentsM.add(new Human("Mother", false, 25, child));
 
-        grand1.add(new Human("дедушка1", true, 50, parents1));
-        grand2.add(new Human("дедушка2", true, 50, parents2));
-        grand1.add(new Human("бабушка1", false, 50, parents1));
-        grand2.add(new Human("бабушка2", false, 50, parents2));
+        grand.add(new Human("дедушка1", true, 50, parentsF));
+        grand.add(new Human("дедушка2", true, 50, parentsM));
+        grand.add(new Human("бабушка1", false, 50, parentsF));
+        grand.add(new Human("бабушка2", false, 50, parentsM));
 
-        family.addAll(grand1);
-        family.addAll(grand2);
-        family.addAll(parents1);
-        family.addAll(parents2);
-        family.addAll(kids);
+        family.addAll(grand);
+        family.addAll(parentsF);
+        family.addAll(parentsM);
+        family.addAll(child);
 
         for (Human item : family) {
             System.out.println(item);
