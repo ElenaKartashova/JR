@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
 public class FiveChampions {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] array = new int[7];
+        int[] array = new int[20];
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
