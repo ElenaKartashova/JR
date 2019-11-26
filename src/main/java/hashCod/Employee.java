@@ -48,4 +48,19 @@ public class Employee {
     public void setDepartment(String department) {
         this.department = department;
     }
+
+    //переопределение equals
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        }
+        if (o == this) {
+            return true;
+        }
+        if (getClass() != o.getClass()) {
+            return false;
+        }
+        Employee e = (Employee) o;
+        return (this.getId() == e.getId());
+    }
 }
