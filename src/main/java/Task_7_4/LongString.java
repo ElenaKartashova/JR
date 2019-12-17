@@ -17,8 +17,6 @@ import java.util.*;
 
 //import java.util.Collections.max;
 
-import static sun.swing.MenuItemLayoutHelper.max;
-
 public class LongString {
     private static ArrayList<String> strings;
 

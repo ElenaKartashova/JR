@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MyTestNew" />
         <module name="JR" />
+        <module name="JRush" />
       </profile>
     </annotationProcessing>
   </component>

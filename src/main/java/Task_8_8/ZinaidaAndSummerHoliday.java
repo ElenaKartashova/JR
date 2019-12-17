@@ -11,8 +11,6 @@ package Task_8_8;
 •	Метод removeAllSummerPeople() должен удалять из словаря всех людей, родившихся летом.
  */
 
-import sun.util.calendar.LocalGregorianCalendar;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

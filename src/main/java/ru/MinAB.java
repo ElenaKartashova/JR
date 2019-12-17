@@ -1,7 +1,6 @@
 package ru;
 
 import java.io.*;
-import static sun.swing.MenuItemLayoutHelper.max;
 
 public class MinAB {
     public static void main(String[] args) throws Exception {
@@ -17,7 +16,7 @@ public class MinAB {
         int c = Integer.parseInt(reader.readLine());
         int d = Integer.parseInt(reader.readLine());
 
-        System.out.println(max(a,b,c,d));
+        System.out.println(Math.max(Math.max(a,b), Math.max(c,d)));
 
        /* if ((a>b) & (a>c) & (a>d))  {
             System.out.println(a);
