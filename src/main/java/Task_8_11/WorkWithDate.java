@@ -1,6 +1,7 @@
 package Task_8_11;
 
-import java.util.Date;
+import java.util.*;
+import java.text.*;
 
 /*
 1. Реализовать метод isDateOdd(String date) так, чтобы он возвращал true,
@@ -23,17 +24,26 @@ JANUARY 2 2020 = false
 */
 public class WorkWithDate {
     public static void main(String[] args) {
-        System.out.println(isDateOdd("MAY 1 2013"));
+        System.out.println(isDateOdd("DECEMBER 26 2019"));
+        System.out.println(" = " );
 
-        //Date date = new Date(1212121212121L);
-        //System.out.println(date);
-
-        Date date = new Date();
-        System.out.println(date);
     }
 
     public static boolean isDateOdd(String date) {
-       // if (date );
-        return true;
+        Calendar calendar = new GregorianCalendar(2019, Calendar.JANUARY, 1);
+        calendar.set(Calendar.HOUR, 00);
+        calendar.set(Calendar.MINUTE, 00);
+        calendar.set(Calendar.SECOND, 00);
+        //Calendar calendar1 = new GregorianCalendar(2019, Calendar.DECEMBER, 1);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM d yyyy", Locale.ENGLISH);
+        dateFormat.getCalendar();
+
+      //  System.out.println(dateFormat.format(calendar.getTime()));
+        Date dateToday = new Date();
+        Date dateCal = calendar.getTime();
+        if ((dateToday.getTime() - dateCal.getTime() / 86400000) % 2 == 0) {
+            return false;
+        } else
+            return true;
     }
 }
