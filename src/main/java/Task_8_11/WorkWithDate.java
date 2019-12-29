@@ -23,27 +23,26 @@ JANUARY 2 2020 = false
 Работа с датой
 */
 public class WorkWithDate {
-    public static void main(String[] args) {
-        System.out.println(isDateOdd("DECEMBER 26 2019"));
-        System.out.println(" = " );
+    public static void main(String[] args) throws ParseException {
 
+        System.out.println(isDateOdd("JANUARY 2 2019"));
     }
 
-    public static boolean isDateOdd(String date) {
-        Calendar calendar = new GregorianCalendar(2019, Calendar.JANUARY, 1);
-        calendar.set(Calendar.HOUR, 00);
-        calendar.set(Calendar.MINUTE, 00);
-        calendar.set(Calendar.SECOND, 00);
-        //Calendar calendar1 = new GregorianCalendar(2019, Calendar.DECEMBER, 1);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM d yyyy", Locale.ENGLISH);
-        dateFormat.getCalendar();
+    public static boolean isDateOdd(String date) throws ParseException {
+        Calendar calendar = new GregorianCalendar();
 
-      //  System.out.println(dateFormat.format(calendar.getTime()));
+        SimpleDateFormat format = new SimpleDateFormat("MMMM d yyyy", Locale.ENGLISH);
+        Date start = format.parse(date);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
         Date dateToday = new Date();
-        Date dateCal = calendar.getTime();
-        if ((dateToday.getTime() - dateCal.getTime() / 86400000) % 2 == 0) {
-            return false;
-        } else
+
+        System.out.print(date + " = ");
+
+        if ((((dateToday.getTime() - start.getTime()) / 86400000) + 1) % 2 != 0) {
             return true;
+        } else
+            return false;
     }
 }

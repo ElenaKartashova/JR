@@ -16,6 +16,6 @@ public class DateTwo {
         Date dateToday = new Date();
         System.out.println(dateToday.getTime());
 
-        System.out.println((dateToday.getTime() - date.getTime())/86400000);
+        System.out.println(((dateToday.getTime() - date.getTime())/86400000) + 1);
     }
 }
