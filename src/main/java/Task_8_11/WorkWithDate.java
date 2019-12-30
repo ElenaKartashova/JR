@@ -46,3 +46,16 @@ public class WorkWithDate {
             return false;
     }
 }
+
+//Решение
+/*  Date date1 = new Date(Date.parse(date));
+        SimpleDateFormat day = new SimpleDateFormat("D");
+        int n = Integer.parseInt(day.format(date1));
+
+        if (n % 2 == 0){
+            return false;
+        }
+        else {
+        return true;
+        }
+    }*/
