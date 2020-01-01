@@ -22,11 +22,13 @@ package Task_8_11;
 •	Класс Solution должен содержать один метод.
 •	Программа должна вывести фамилию семьи по введенному городу.
  */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.*;
 
 /*
 Модернизация ПО
@@ -34,23 +36,25 @@ import java.util.List;
 public class ModernizationPO {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Map<String, String> map = new HashMap<String, String>();
 
-        List<String> list = new ArrayList<String>();
         while (true) {
-            String family = reader.readLine();
-            if (family.isEmpty()) {
+            String cityName = reader.readLine();
+            if (cityName.isEmpty()) {
                 break;
             }
-
-            list.add(family);
+            String familyName = reader.readLine();
+            map.put(cityName, familyName);
         }
 
-        // Read the house number
-        int houseNumber = Integer.parseInt(reader.readLine());
-
-        if (0 <= houseNumber && houseNumber < list.size()) {
-            String familyName = list.get(houseNumber);
-            System.out.println(familyName);
+        String city = reader.readLine();
+        Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> pair = iterator.next();
+            // for (Map.Entry<String, String> pair : map.entrySet()) {
+            if (city.equals(pair.getKey()))
+                System.out.println(pair.getValue());
         }
     }
 }
+
