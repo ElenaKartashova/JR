@@ -1,4 +1,7 @@
 package Task_8_11;
+
+import java.util.*;
+
 /*
 Задача: Введи с клавиатуры 20 слов и выведи их в алфавитном порядке. Каждое слово - с новой строки.
 
@@ -19,7 +22,7 @@ import java.io.InputStreamReader;
 public class TaskAboutAlgoritms {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String[] array = new String[20];
+        String[] array = new String[5];
         for (int i = 0; i < array.length; i++) {
             array[i] = reader.readLine();
         }
@@ -33,6 +36,15 @@ public class TaskAboutAlgoritms {
 
     public static void sort(String[] array) {
         //напишите тут ваш код
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int k = i + 1; k < array.length; k++) {
+                if (isGreaterThan(array[i], array[k])) {
+                    String str = array[i];
+                    array[i] = array[k];
+                    array[k] = str;
+                }
+            }
+        }
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'
