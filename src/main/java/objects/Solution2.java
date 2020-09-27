@@ -12,7 +12,6 @@ package objects;
 //Необходимо создать объект типа Person и занести его ссылку в переменную person.
 //Необходимо вызвать метод initialize у созданного объекта и передать в него какие-либо параметры.
 
-import javax.xml.soap.SOAPPart;
 
 public class Solution2 {
     public static void main(String[] args) {
