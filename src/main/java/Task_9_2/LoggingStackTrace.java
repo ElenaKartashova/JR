@@ -22,7 +22,9 @@ public class LoggingStackTrace {
         log("In main method");
     }
 
-    public static void log(String s) {
+    public static void log(String text) {
         //напишите тут ваш код
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        System.out.println(stackTraceElements[2].getClassName()+": " + stackTraceElements[2].getMethodName() + ": " + text);
     }
 }

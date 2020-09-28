@@ -1,4 +1,5 @@
 package Task_9_2;
+
 /*
 Написать пять методов, которые вызывают друг друга.
 Метод должен вернуть номер строки кода, из которого вызвали этот метод.
@@ -14,31 +15,38 @@ package Task_9_2;
 Кто меня вызывал?
 */
 public class WhoCallMe {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         method1();
     }
 
     public static int method1() {
         method2();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        return  /*add your code here*/ stackTraceElements[2].getLineNumber();
     }
 
     public static int method2() {
         method3();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        return  /*add your code here*/ stackTraceElements[2].getLineNumber();
     }
 
     public static int method3() {
         method4();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        return  /*add your code here*/ stackTraceElements[2].getLineNumber();
     }
 
     public static int method4() {
         method5();
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        return  /*add your code here*/ stackTraceElements[2].getLineNumber();
     }
 
     public static int method5() {
-        return  /*напишите тут ваш код*/ 0;
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        return  /*add your code here*/ stackTraceElements[2].getLineNumber();
     }
+
 }

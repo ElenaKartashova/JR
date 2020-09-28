@@ -15,10 +15,13 @@ package Task_9_2;
 */
 public class StackTrace_9_5 {
     public static void main(String[] args) {
-       /* int deep = getStackTraceDepth();
+       int deep = getStackTraceDepth();
     }
 
     public static int getStackTraceDepth() {
-        //напишите тут ваш код */
+        //напишите тут ваш код
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        System.out.println(stackTraceElements.length);
+        return stackTraceElements.length;
     }
 }

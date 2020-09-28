@@ -26,7 +26,6 @@ public class AgainStackTrace {
             StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
             System.out.println(stackTraceElements[2].getMethodName());
             return (stackTraceElements[2].getMethodName());
-
         }
 
         public static String method2()
@@ -36,7 +35,6 @@ public class AgainStackTrace {
             StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
             System.out.println(stackTraceElements[2].getMethodName());
             return (stackTraceElements[2].getMethodName());
-
         }
 
         public static String method3()
@@ -46,7 +44,6 @@ public class AgainStackTrace {
             StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
             System.out.println(stackTraceElements[2].getMethodName());
             return (stackTraceElements[2].getMethodName());
-
         }
 
         public static String method4()
@@ -56,7 +53,6 @@ public class AgainStackTrace {
             StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
             System.out.println(stackTraceElements[2].getMethodName());
             return (stackTraceElements[2].getMethodName());
-
         }
 
         public static String method5()
@@ -65,6 +61,6 @@ public class AgainStackTrace {
             StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
             System.out.println(stackTraceElements[2].getMethodName());
             return (stackTraceElements[2].getMethodName());
-
         }
+
 }
