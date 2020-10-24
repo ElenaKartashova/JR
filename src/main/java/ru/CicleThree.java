@@ -11,8 +11,6 @@ package ru;
 •	В программе должен использоваться цикл for.
  */
 
-import javax.xml.soap.SOAPPart;
-
 public class CicleThree {
 
     public static void main(String[] args) {
