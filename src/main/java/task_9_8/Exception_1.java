@@ -23,15 +23,13 @@ public class Exception_1 {
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
 
-try {
-    method1();
-}
-catch (NullPointerException e) {
-    System.out.println("NullPointerException перехвачен");
-}
-catch (FileNotFoundException e) {
-    System.out.println("FileNotFoundException перехвачен");
-}
+        try {
+            method1();
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException перехвачен");
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFoundException перехвачен");
+        }
 
         //напишите тут ваш код
     }
